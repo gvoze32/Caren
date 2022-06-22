@@ -25,8 +25,8 @@ Partial Class FormLogin
         Me.txtLogin = New System.Windows.Forms.Label()
         Me.txtAdmin = New System.Windows.Forms.Label()
         Me.txtPassword = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.tbAdmin = New System.Windows.Forms.TextBox()
+        Me.tbPassword = New System.Windows.Forms.TextBox()
         Me.btnMasuk = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -63,19 +63,20 @@ Partial Class FormLogin
         Me.txtPassword.TabIndex = 2
         Me.txtPassword.Text = "Password"
         '
-        'TextBox1
+        'tbAdmin
         '
-        Me.TextBox1.Location = New System.Drawing.Point(353, 177)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(125, 27)
-        Me.TextBox1.TabIndex = 3
+        Me.tbAdmin.Location = New System.Drawing.Point(353, 177)
+        Me.tbAdmin.Name = "tbAdmin"
+        Me.tbAdmin.Size = New System.Drawing.Size(125, 27)
+        Me.tbAdmin.TabIndex = 3
         '
-        'TextBox2
+        'tbPassword
         '
-        Me.TextBox2.Location = New System.Drawing.Point(353, 232)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(125, 27)
-        Me.TextBox2.TabIndex = 4
+        Me.tbPassword.Location = New System.Drawing.Point(353, 232)
+        Me.tbPassword.Name = "tbPassword"
+        Me.tbPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.tbPassword.Size = New System.Drawing.Size(125, 27)
+        Me.tbPassword.TabIndex = 4
         '
         'btnMasuk
         '
@@ -97,8 +98,8 @@ Partial Class FormLogin
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(668, 450)
         Me.Controls.Add(Me.btnMasuk)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.tbPassword)
+        Me.Controls.Add(Me.tbAdmin)
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.txtAdmin)
         Me.Controls.Add(Me.txtLogin)
@@ -112,7 +113,7 @@ Partial Class FormLogin
     Friend WithEvents txtLogin As Label
     Friend WithEvents txtAdmin As Label
     Friend WithEvents txtPassword As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents tbAdmin As TextBox
+    Friend WithEvents tbPassword As TextBox
     Friend WithEvents btnMasuk As Button
 End Class
