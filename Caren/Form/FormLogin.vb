@@ -1,14 +1,6 @@
 ﻿Imports System.Data.Odbc
 
 Public Class FormLogin
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles txtLogin.Click
-
-    End Sub
-
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Sub btnMasuk_Click(sender As Object, e As EventArgs) Handles btnMasuk.Click
         If tbAdmin.Text = "" Or tbPassword.Text = "" Then
             MsgBox("data login belum lengkap")
