@@ -103,6 +103,7 @@ Partial Class FormLogin
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.txtAdmin)
         Me.Controls.Add(Me.txtLogin)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "FormLogin"
         Me.Text = "Login"
         Me.ResumeLayout(False)
