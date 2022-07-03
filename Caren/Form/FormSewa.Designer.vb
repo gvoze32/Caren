@@ -22,35 +22,40 @@ Partial Class FormSewa
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtNama = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtHP = New System.Windows.Forms.TextBox()
+        Me.txtNIK = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtAdmin = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtDenda = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.txtMerekMobil = New System.Windows.Forms.TextBox()
+        Me.txtHarga = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.btnSewa = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbSopir2 = New System.Windows.Forms.CheckBox()
+        Me.cbSopir = New System.Windows.Forms.CheckBox()
+        Me.btnMasuk = New System.Windows.Forms.Button()
+        Me.btnHitung = New System.Windows.Forms.Button()
+        Me.cmbIDMobil = New System.Windows.Forms.ComboBox()
+        Me.txtIDSewa = New System.Windows.Forms.TextBox()
+        Me.txtIDCost = New System.Windows.Forms.TextBox()
+        Me.txtIDSopir = New System.Windows.Forms.TextBox()
+        Me.txtTglAmbil = New System.Windows.Forms.DateTimePicker()
+        Me.txtTglKembali = New System.Windows.Forms.DateTimePicker()
+        Me.txtIDBayar = New System.Windows.Forms.TextBox()
+        Me.txtHargaMobil = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
-        'TextBox4
+        'txtNama
         '
-        Me.TextBox4.Location = New System.Drawing.Point(293, 190)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(191, 27)
-        Me.TextBox4.TabIndex = 43
+        Me.txtNama.Location = New System.Drawing.Point(293, 190)
+        Me.txtNama.Name = "txtNama"
+        Me.txtNama.Size = New System.Drawing.Size(191, 27)
+        Me.txtNama.TabIndex = 43
         '
         'Label1
         '
@@ -63,19 +68,19 @@ Partial Class FormSewa
         Me.Label1.TabIndex = 42
         Me.Label1.Text = "Nama                : "
         '
-        'TextBox2
+        'txtHP
         '
-        Me.TextBox2.Location = New System.Drawing.Point(293, 289)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(191, 27)
-        Me.TextBox2.TabIndex = 41
+        Me.txtHP.Location = New System.Drawing.Point(293, 289)
+        Me.txtHP.Name = "txtHP"
+        Me.txtHP.Size = New System.Drawing.Size(191, 27)
+        Me.txtHP.TabIndex = 41
         '
-        'TextBox1
+        'txtNIK
         '
-        Me.TextBox1.Location = New System.Drawing.Point(293, 241)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(191, 27)
-        Me.TextBox1.TabIndex = 40
+        Me.txtNIK.Location = New System.Drawing.Point(293, 241)
+        Me.txtNIK.Name = "txtNIK"
+        Me.txtNIK.Size = New System.Drawing.Size(191, 27)
+        Me.txtNIK.TabIndex = 40
         '
         'Label3
         '
@@ -99,13 +104,6 @@ Partial Class FormSewa
         Me.txtAdmin.TabIndex = 38
         Me.txtAdmin.Text = "NIK                   : "
         '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(293, 384)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(191, 27)
-        Me.TextBox3.TabIndex = 47
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -127,13 +125,6 @@ Partial Class FormSewa
         Me.Label4.Size = New System.Drawing.Size(190, 28)
         Me.Label4.TabIndex = 44
         Me.Label4.Text = "ID Mobil            : "
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(293, 429)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(191, 27)
-        Me.TextBox6.TabIndex = 49
         '
         'Label5
         '
@@ -157,19 +148,19 @@ Partial Class FormSewa
         Me.txtDenda.TabIndex = 50
         Me.txtDenda.Text = "FORM SEWA"
         '
-        'TextBox7
+        'txtMerekMobil
         '
-        Me.TextBox7.Location = New System.Drawing.Point(493, 336)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(96, 27)
-        Me.TextBox7.TabIndex = 51
+        Me.txtMerekMobil.Location = New System.Drawing.Point(493, 336)
+        Me.txtMerekMobil.Name = "txtMerekMobil"
+        Me.txtMerekMobil.Size = New System.Drawing.Size(96, 27)
+        Me.txtMerekMobil.TabIndex = 51
         '
-        'TextBox8
+        'txtHarga
         '
-        Me.TextBox8.Location = New System.Drawing.Point(293, 526)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(191, 27)
-        Me.TextBox8.TabIndex = 53
+        Me.txtHarga.Location = New System.Drawing.Point(293, 526)
+        Me.txtHarga.Name = "txtHarga"
+        Me.txtHarga.Size = New System.Drawing.Size(191, 27)
+        Me.txtHarga.TabIndex = 53
         '
         'Label6
         '
@@ -193,63 +184,112 @@ Partial Class FormSewa
         Me.Label7.TabIndex = 54
         Me.Label7.Text = "Sopir                 : "
         '
-        'CheckBox2
+        'cbSopir2
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.CheckBox2.ForeColor = System.Drawing.Color.White
-        Me.CheckBox2.Location = New System.Drawing.Point(381, 474)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(131, 32)
-        Me.CheckBox2.TabIndex = 56
-        Me.CheckBox2.Text = "Tidak Ada"
-        Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.cbSopir2.AutoSize = True
+        Me.cbSopir2.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.cbSopir2.ForeColor = System.Drawing.Color.White
+        Me.cbSopir2.Location = New System.Drawing.Point(381, 474)
+        Me.cbSopir2.Name = "cbSopir2"
+        Me.cbSopir2.Size = New System.Drawing.Size(131, 32)
+        Me.cbSopir2.TabIndex = 56
+        Me.cbSopir2.Text = "Tidak Ada"
+        Me.cbSopir2.UseVisualStyleBackColor = True
         '
-        'CheckBox1
+        'cbSopir
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.CheckBox1.ForeColor = System.Drawing.Color.White
-        Me.CheckBox1.Location = New System.Drawing.Point(292, 473)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(72, 32)
-        Me.CheckBox1.TabIndex = 55
-        Me.CheckBox1.Text = "Ada"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.cbSopir.AutoSize = True
+        Me.cbSopir.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.cbSopir.ForeColor = System.Drawing.Color.White
+        Me.cbSopir.Location = New System.Drawing.Point(292, 473)
+        Me.cbSopir.Name = "cbSopir"
+        Me.cbSopir.Size = New System.Drawing.Size(72, 32)
+        Me.cbSopir.TabIndex = 55
+        Me.cbSopir.Text = "Ada"
+        Me.cbSopir.UseVisualStyleBackColor = True
         '
-        'btnSewa
+        'btnMasuk
         '
-        Me.btnSewa.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.btnSewa.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnSewa.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnSewa.ForeColor = System.Drawing.Color.White
-        Me.btnSewa.Location = New System.Drawing.Point(639, 609)
-        Me.btnSewa.Name = "btnSewa"
-        Me.btnSewa.Size = New System.Drawing.Size(251, 45)
-        Me.btnSewa.TabIndex = 57
-        Me.btnSewa.Text = "Masukkan ke database"
-        Me.btnSewa.UseVisualStyleBackColor = False
+        Me.btnMasuk.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.btnMasuk.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnMasuk.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnMasuk.ForeColor = System.Drawing.Color.White
+        Me.btnMasuk.Location = New System.Drawing.Point(639, 609)
+        Me.btnMasuk.Name = "btnMasuk"
+        Me.btnMasuk.Size = New System.Drawing.Size(251, 45)
+        Me.btnMasuk.TabIndex = 57
+        Me.btnMasuk.Text = "Masukkan ke database"
+        Me.btnMasuk.UseVisualStyleBackColor = False
         '
-        'Button1
+        'btnHitung
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(493, 516)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(99, 45)
-        Me.Button1.TabIndex = 58
-        Me.Button1.Text = "HITUNG"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnHitung.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.btnHitung.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnHitung.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnHitung.ForeColor = System.Drawing.Color.White
+        Me.btnHitung.Location = New System.Drawing.Point(493, 516)
+        Me.btnHitung.Name = "btnHitung"
+        Me.btnHitung.Size = New System.Drawing.Size(99, 45)
+        Me.btnHitung.TabIndex = 58
+        Me.btnHitung.Text = "HITUNG"
+        Me.btnHitung.UseVisualStyleBackColor = False
         '
-        'ComboBox1
+        'cmbIDMobil
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(293, 336)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(192, 28)
-        Me.ComboBox1.TabIndex = 59
+        Me.cmbIDMobil.FormattingEnabled = True
+        Me.cmbIDMobil.Location = New System.Drawing.Point(293, 336)
+        Me.cmbIDMobil.Name = "cmbIDMobil"
+        Me.cmbIDMobil.Size = New System.Drawing.Size(192, 28)
+        Me.cmbIDMobil.TabIndex = 59
+        '
+        'txtIDSewa
+        '
+        Me.txtIDSewa.Location = New System.Drawing.Point(101, 140)
+        Me.txtIDSewa.Name = "txtIDSewa"
+        Me.txtIDSewa.Size = New System.Drawing.Size(191, 27)
+        Me.txtIDSewa.TabIndex = 61
+        '
+        'txtIDCost
+        '
+        Me.txtIDCost.Location = New System.Drawing.Point(298, 140)
+        Me.txtIDCost.Name = "txtIDCost"
+        Me.txtIDCost.Size = New System.Drawing.Size(191, 27)
+        Me.txtIDCost.TabIndex = 62
+        '
+        'txtIDSopir
+        '
+        Me.txtIDSopir.Location = New System.Drawing.Point(495, 140)
+        Me.txtIDSopir.Name = "txtIDSopir"
+        Me.txtIDSopir.Size = New System.Drawing.Size(191, 27)
+        Me.txtIDSopir.TabIndex = 63
+        '
+        'txtTglAmbil
+        '
+        Me.txtTglAmbil.Location = New System.Drawing.Point(292, 382)
+        Me.txtTglAmbil.Name = "txtTglAmbil"
+        Me.txtTglAmbil.Size = New System.Drawing.Size(250, 27)
+        Me.txtTglAmbil.TabIndex = 64
+        '
+        'txtTglKembali
+        '
+        Me.txtTglKembali.Location = New System.Drawing.Point(293, 427)
+        Me.txtTglKembali.Name = "txtTglKembali"
+        Me.txtTglKembali.Size = New System.Drawing.Size(250, 27)
+        Me.txtTglKembali.TabIndex = 65
+        '
+        'txtIDBayar
+        '
+        Me.txtIDBayar.Location = New System.Drawing.Point(692, 140)
+        Me.txtIDBayar.Name = "txtIDBayar"
+        Me.txtIDBayar.Size = New System.Drawing.Size(191, 27)
+        Me.txtIDBayar.TabIndex = 66
+        '
+        'txtHargaMobil
+        '
+        Me.txtHargaMobil.Location = New System.Drawing.Point(595, 336)
+        Me.txtHargaMobil.Name = "txtHargaMobil"
+        Me.txtHargaMobil.Size = New System.Drawing.Size(96, 27)
+        Me.txtHargaMobil.TabIndex = 67
         '
         'FormSewa
         '
@@ -257,25 +297,30 @@ Partial Class FormSewa
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(936, 687)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.btnSewa)
-        Me.Controls.Add(Me.CheckBox2)
-        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.txtHargaMobil)
+        Me.Controls.Add(Me.txtIDBayar)
+        Me.Controls.Add(Me.txtTglKembali)
+        Me.Controls.Add(Me.txtTglAmbil)
+        Me.Controls.Add(Me.txtIDSopir)
+        Me.Controls.Add(Me.txtIDCost)
+        Me.Controls.Add(Me.txtIDSewa)
+        Me.Controls.Add(Me.cmbIDMobil)
+        Me.Controls.Add(Me.btnHitung)
+        Me.Controls.Add(Me.btnMasuk)
+        Me.Controls.Add(Me.cbSopir2)
+        Me.Controls.Add(Me.cbSopir)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.TextBox8)
+        Me.Controls.Add(Me.txtHarga)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox7)
+        Me.Controls.Add(Me.txtMerekMobil)
         Me.Controls.Add(Me.txtDenda)
-        Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.txtNama)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtHP)
+        Me.Controls.Add(Me.txtNIK)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtAdmin)
         Me.Name = "FormSewa"
@@ -285,25 +330,30 @@ Partial Class FormSewa
 
     End Sub
 
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtNama As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtHP As TextBox
+    Friend WithEvents txtNIK As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents txtAdmin As Label
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox6 As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents txtDenda As Label
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents txtMerekMobil As TextBox
+    Friend WithEvents txtHarga As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents btnSewa As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbSopir2 As CheckBox
+    Friend WithEvents cbSopir As CheckBox
+    Friend WithEvents btnMasuk As Button
+    Friend WithEvents btnHitung As Button
+    Friend WithEvents cmbIDMobil As ComboBox
+    Friend WithEvents txtIDSewa As TextBox
+    Friend WithEvents txtIDCost As TextBox
+    Friend WithEvents txtIDSopir As TextBox
+    Friend WithEvents txtTglAmbil As DateTimePicker
+    Friend WithEvents txtTglKembali As DateTimePicker
+    Friend WithEvents txtIDBayar As TextBox
+    Friend WithEvents txtHargaMobil As TextBox
 End Class

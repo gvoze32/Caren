@@ -2,7 +2,7 @@
     Private _idMobil As String
     Private _merekMobil As String
     Private _tipeKendaraan As String
-    Private _hargaSewa As String
+    Private _hargaSewa As Integer
     Private _idAdmin As String
 
     Public Property IdMobil As String
