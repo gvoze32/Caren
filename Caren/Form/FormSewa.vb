@@ -3,10 +3,16 @@
 Public Class FormSewa
     Dim modeProses As Integer
     Private Sub FormSewa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Memberi custom date and time
+        txtTglAmbil.CustomFormat = "yyyy-MM-dd"
+        txtTglKembali.CustomFormat = "yyyy-MM-dd"
+
+        'Memanggil fungsi kodebaru
         txtIDSewa.Text = KontrolSewa.kodebarusewa()
         txtIDCost.Text = KontrolSewa.kodebarucostumer()
         txtIDBayar.Text = KontrolSewa.kodebarubayar()
 
+        'Menghilangkan textbox
         txtIDSewa.Visible = False
         txtIDCost.Visible = False
         txtIDBayar.Visible = False
@@ -14,12 +20,10 @@ Public Class FormSewa
         txtMerekMobil.Visible = False
         txtHargaMobil.Visible = False
 
+        'Mematikan tombol
         btnMasuk.Enabled = False
 
-        txtIDSewa.Text = KontrolSewa.kodebarusewa()
-        txtIDCost.Text = KontrolSewa.kodebarucostumer()
-        txtIDBayar.Text = KontrolSewa.kodebarubayar()
-
+        'Memanggil isi database ke combobox
         TampilMobil()
 
         'Acak Supir
@@ -76,26 +80,21 @@ Public Class FormSewa
 
     Private Sub btnMasuk_Click(sender As Object, e As EventArgs) Handles btnMasuk.Click
         With EntitasSewa
-            .id_sewa = txtIDSewa.Text
-            .id_cost = txtIDCost.Text
-            .id_mobil = txtMerekMobil.Text
-            .id_supir = txtIDSupir.Text
-            .id_bayar = txtIDBayar.Text
-            .nama = txtNama.Text
-            .nik = txtNIK.Text
-            .nohp = txtHP.Text
-            .tgl_ambil = txtTglAmbil.Text
-            .tgl_kembali = txtTglKembali.Text
-
+            .IDSewa = txtIDSewa.Text
+            .IDCost = txtIDCost.Text
+            .IDMobil = txtMerekMobil.Text
+            .IDSupir = txtIDSupir.Text
+            .IDBayar = txtIDBayar.Text
+            .Nama = txtNama.Text
+            .NIK = txtNIK.Text
+            .NOHP = txtHP.Text
+            .TglAmbil = txtTglAmbil.Value
+            .TglKembali = txtTglKembali.Value
+            .TotalBayar = txtHarga.Text
         End With
 
-        If modeProses = 1 Then
-            KontrolMobil.InsertData(EntitasMobil)
-            MsgBox("Data berhasil ditambahkan")
-        ElseIf modeProses = 2 Then
-            KontrolMobil.updateData(EntitasMobil)
-            MsgBox("Data berhasil diubah")
-        End If
+        KontrolSewa.InsertData(EntitasSewa)
+        MsgBox("Data berhasil ditambahkan")
         MsgBox("Data telah disimpan", MsgBoxStyle.Information, "Info")
     End Sub
 End Class

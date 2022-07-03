@@ -10,8 +10,9 @@
     Private _nohp As Integer
     Private _merekmobil As String
     Private _id_bayar As String
+    Private _total_bayar As Integer
 
-    Public Property id_sewa() As String
+    Public Property IDSewa As String
         Get
             Return _id_sewa
         End Get
@@ -20,7 +21,7 @@
         End Set
     End Property
 
-    Public Property tgl_ambil() As Date
+    Public Property TglAmbil As Date
         Get
             Return _tgl_ambil
         End Get
@@ -29,7 +30,7 @@
         End Set
     End Property
 
-    Public Property tgl_kembali() As Date
+    Public Property TglKembali As Date
         Get
             Return _tgl_kembali
         End Get
@@ -38,7 +39,7 @@
         End Set
     End Property
 
-    Public Property id_cost() As String
+    Public Property IDCost As String
         Get
             Return _id_cost
         End Get
@@ -47,7 +48,7 @@
         End Set
     End Property
 
-    Public Property id_mobil() As String
+    Public Property IDMobil As String
         Get
             Return _id_mobil
         End Get
@@ -56,7 +57,7 @@
         End Set
     End Property
 
-    Public Property id_supir() As String
+    Public Property IDSupir As String
         Get
             Return _id_supir
         End Get
@@ -65,7 +66,7 @@
         End Set
     End Property
 
-    Public Property nama() As String
+    Public Property Nama As String
         Get
             Return _nama
         End Get
@@ -74,7 +75,7 @@
         End Set
     End Property
 
-    Public Property nik() As Integer
+    Public Property NIK As Integer
         Get
             Return _nik
         End Get
@@ -83,7 +84,7 @@
         End Set
     End Property
 
-    Public Property nohp() As Integer
+    Public Property NOHP As Integer
         Get
             Return _nohp
         End Get
@@ -92,7 +93,7 @@
         End Set
     End Property
 
-    Public Property merekmobil() As String
+    Public Property MerekMobil As String
         Get
             Return _merekmobil
         End Get
@@ -101,12 +102,21 @@
         End Set
     End Property
 
-    Public Property id_bayar() As String
+    Public Property IDBayar As String
         Get
             Return _id_bayar
         End Get
         Set(ByVal value As String)
             _id_bayar = value
+        End Set
+    End Property
+
+    Public Property TotalBayar As Integer
+        Get
+            Return _total_bayar
+        End Get
+        Set(ByVal value As Integer)
+            _total_bayar = value
         End Set
     End Property
 End Class

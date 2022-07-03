@@ -265,6 +265,7 @@ Partial Class FormSewa
         '
         'txtTglAmbil
         '
+        Me.txtTglAmbil.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.txtTglAmbil.Location = New System.Drawing.Point(292, 382)
         Me.txtTglAmbil.Name = "txtTglAmbil"
         Me.txtTglAmbil.Size = New System.Drawing.Size(250, 27)
@@ -272,6 +273,7 @@ Partial Class FormSewa
         '
         'txtTglKembali
         '
+        Me.txtTglKembali.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.txtTglKembali.Location = New System.Drawing.Point(293, 427)
         Me.txtTglKembali.Name = "txtTglKembali"
         Me.txtTglKembali.Size = New System.Drawing.Size(250, 27)
