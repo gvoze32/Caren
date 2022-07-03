@@ -9,15 +9,26 @@ Public Class FormSewa
 
         txtIDSewa.Visible = False
         txtIDCost.Visible = False
-        txtIDSopir.Visible = False
         txtIDBayar.Visible = False
+        txtIDSupir.Visible = False
         txtMerekMobil.Visible = False
         txtHargaMobil.Visible = False
-        'txtHargaMobil.Visible = False
 
         btnMasuk.Enabled = False
 
+        txtIDSewa.Text = KontrolSewa.kodebarusewa()
+        txtIDCost.Text = KontrolSewa.kodebarucostumer()
+        txtIDBayar.Text = KontrolSewa.kodebarubayar()
+
         TampilMobil()
+
+        'Acak Supir
+        CMD = New OdbcCommand("select * from supir order by RAND()", BUKAKONEKSI)
+        DTR = CMD.ExecuteReader
+        If DTR.Read Then
+            txtIDSupir.Text = DTR.Item(0).ToString
+        End If
+        BUKAKONEKSI.Close()
     End Sub
 
     Private Sub FormSewa_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
@@ -54,7 +65,7 @@ Public Class FormSewa
         selisih = DateDiff(DateInterval.Day, txtTglAmbil.Value, txtTglKembali.Value)
         totalselisih = selisih + 1
 
-        If cbSopir.Checked = True Then
+        If cbSupir.Checked = True Then
             txtHarga.Text = (hargamobil + 100000) * totalselisih
         Else
             txtHarga.Text = hargamobil * totalselisih
@@ -66,11 +77,15 @@ Public Class FormSewa
     Private Sub btnMasuk_Click(sender As Object, e As EventArgs) Handles btnMasuk.Click
         With EntitasSewa
             .id_sewa = txtIDSewa.Text
-            .tgl_ambil = txtTglAmbil.Text
-            .tgl_kembali = txtTglKembali.Text
             .id_cost = txtIDCost.Text
             .id_mobil = txtMerekMobil.Text
-            .id_supir = txtIDSopir.Text
+            .id_supir = txtIDSupir.Text
+            .id_bayar = txtIDBayar.Text
+            .nama = txtNama.Text
+            .nik = txtNIK.Text
+            .nohp = txtHP.Text
+            .tgl_ambil = txtTglAmbil.Text
+            .tgl_kembali = txtTglKembali.Text
 
         End With
 

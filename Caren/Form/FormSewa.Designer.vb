@@ -37,13 +37,13 @@ Partial Class FormSewa
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.cbSopir2 = New System.Windows.Forms.CheckBox()
-        Me.cbSopir = New System.Windows.Forms.CheckBox()
+        Me.cbSupir = New System.Windows.Forms.CheckBox()
         Me.btnMasuk = New System.Windows.Forms.Button()
         Me.btnHitung = New System.Windows.Forms.Button()
         Me.cmbIDMobil = New System.Windows.Forms.ComboBox()
         Me.txtIDSewa = New System.Windows.Forms.TextBox()
         Me.txtIDCost = New System.Windows.Forms.TextBox()
-        Me.txtIDSopir = New System.Windows.Forms.TextBox()
+        Me.txtIDSupir = New System.Windows.Forms.TextBox()
         Me.txtTglAmbil = New System.Windows.Forms.DateTimePicker()
         Me.txtTglKembali = New System.Windows.Forms.DateTimePicker()
         Me.txtIDBayar = New System.Windows.Forms.TextBox()
@@ -196,17 +196,17 @@ Partial Class FormSewa
         Me.cbSopir2.Text = "Tidak Ada"
         Me.cbSopir2.UseVisualStyleBackColor = True
         '
-        'cbSopir
+        'cbSupir
         '
-        Me.cbSopir.AutoSize = True
-        Me.cbSopir.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.cbSopir.ForeColor = System.Drawing.Color.White
-        Me.cbSopir.Location = New System.Drawing.Point(292, 473)
-        Me.cbSopir.Name = "cbSopir"
-        Me.cbSopir.Size = New System.Drawing.Size(72, 32)
-        Me.cbSopir.TabIndex = 55
-        Me.cbSopir.Text = "Ada"
-        Me.cbSopir.UseVisualStyleBackColor = True
+        Me.cbSupir.AutoSize = True
+        Me.cbSupir.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.cbSupir.ForeColor = System.Drawing.Color.White
+        Me.cbSupir.Location = New System.Drawing.Point(292, 473)
+        Me.cbSupir.Name = "cbSupir"
+        Me.cbSupir.Size = New System.Drawing.Size(72, 32)
+        Me.cbSupir.TabIndex = 55
+        Me.cbSupir.Text = "Ada"
+        Me.cbSupir.UseVisualStyleBackColor = True
         '
         'btnMasuk
         '
@@ -256,12 +256,12 @@ Partial Class FormSewa
         Me.txtIDCost.Size = New System.Drawing.Size(191, 27)
         Me.txtIDCost.TabIndex = 62
         '
-        'txtIDSopir
+        'txtIDSupir
         '
-        Me.txtIDSopir.Location = New System.Drawing.Point(495, 140)
-        Me.txtIDSopir.Name = "txtIDSopir"
-        Me.txtIDSopir.Size = New System.Drawing.Size(191, 27)
-        Me.txtIDSopir.TabIndex = 63
+        Me.txtIDSupir.Location = New System.Drawing.Point(495, 140)
+        Me.txtIDSupir.Name = "txtIDSupir"
+        Me.txtIDSupir.Size = New System.Drawing.Size(191, 27)
+        Me.txtIDSupir.TabIndex = 63
         '
         'txtTglAmbil
         '
@@ -301,14 +301,14 @@ Partial Class FormSewa
         Me.Controls.Add(Me.txtIDBayar)
         Me.Controls.Add(Me.txtTglKembali)
         Me.Controls.Add(Me.txtTglAmbil)
-        Me.Controls.Add(Me.txtIDSopir)
+        Me.Controls.Add(Me.txtIDSupir)
         Me.Controls.Add(Me.txtIDCost)
         Me.Controls.Add(Me.txtIDSewa)
         Me.Controls.Add(Me.cmbIDMobil)
         Me.Controls.Add(Me.btnHitung)
         Me.Controls.Add(Me.btnMasuk)
         Me.Controls.Add(Me.cbSopir2)
-        Me.Controls.Add(Me.cbSopir)
+        Me.Controls.Add(Me.cbSupir)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.txtHarga)
         Me.Controls.Add(Me.Label6)
@@ -345,13 +345,13 @@ Partial Class FormSewa
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents cbSopir2 As CheckBox
-    Friend WithEvents cbSopir As CheckBox
+    Friend WithEvents cbSupir As CheckBox
     Friend WithEvents btnMasuk As Button
     Friend WithEvents btnHitung As Button
     Friend WithEvents cmbIDMobil As ComboBox
     Friend WithEvents txtIDSewa As TextBox
     Friend WithEvents txtIDCost As TextBox
-    Friend WithEvents txtIDSopir As TextBox
+    Friend WithEvents txtIDSupir As TextBox
     Friend WithEvents txtTglAmbil As DateTimePicker
     Friend WithEvents txtTglKembali As DateTimePicker
     Friend WithEvents txtIDBayar As TextBox

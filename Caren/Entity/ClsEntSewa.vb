@@ -9,7 +9,7 @@
     Private _nik As Integer
     Private _nohp As Integer
     Private _merekmobil As String
-    Private _idbayar As String
+    Private _id_bayar As String
 
     Public Property id_sewa() As String
         Get
@@ -101,12 +101,12 @@
         End Set
     End Property
 
-    Public Property idbayar() As String
+    Public Property id_bayar() As String
         Get
-            Return _idbayar
+            Return _id_bayar
         End Get
         Set(ByVal value As String)
-            _idbayar = value
+            _id_bayar = value
         End Set
     End Property
 End Class
