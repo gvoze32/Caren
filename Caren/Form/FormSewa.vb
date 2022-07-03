@@ -2,7 +2,6 @@
 
 Public Class FormSewa
     Dim modeProses As Integer
-
     Private Sub FormSewa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtIDSewa.Text = KontrolSewa.kodebarusewa()
         txtIDCost.Text = KontrolSewa.kodebarucostumer()
@@ -12,7 +11,11 @@ Public Class FormSewa
         txtIDCost.Visible = False
         txtIDSopir.Visible = False
         txtIDBayar.Visible = False
+        txtMerekMobil.Visible = False
+        txtHargaMobil.Visible = False
         'txtHargaMobil.Visible = False
+
+        btnMasuk.Enabled = False
 
         TampilMobil()
     End Sub
@@ -45,7 +48,19 @@ Public Class FormSewa
     End Sub
 
     Private Sub btnHitung_Click(sender As Object, e As EventArgs) Handles btnHitung.Click
+        Dim hargamobil = CInt(txtHargaMobil.Text)
+        Dim selisih As Integer
+        Dim totalselisih As Integer
+        selisih = DateDiff(DateInterval.Day, txtTglAmbil.Value, txtTglKembali.Value)
+        totalselisih = selisih + 1
 
+        If cbSopir.Checked = True Then
+            txtHarga.Text = (hargamobil + 100000) * totalselisih
+        Else
+            txtHarga.Text = hargamobil * totalselisih
+        End If
+
+        btnMasuk.Enabled = True
     End Sub
 
     Private Sub btnMasuk_Click(sender As Object, e As EventArgs) Handles btnMasuk.Click
