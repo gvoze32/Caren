@@ -22,42 +22,42 @@ Partial Class FormCariSewa
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.btnSewa = New System.Windows.Forms.Button()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.DGCariSewa = New System.Windows.Forms.DataGridView()
+        Me.btnCari = New System.Windows.Forms.Button()
+        Me.txtCari = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGCariSewa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'DGCariSewa
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(19, 175)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 29
-        Me.DataGridView1.Size = New System.Drawing.Size(896, 488)
-        Me.DataGridView1.TabIndex = 35
+        Me.DGCariSewa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGCariSewa.Location = New System.Drawing.Point(19, 175)
+        Me.DGCariSewa.Name = "DGCariSewa"
+        Me.DGCariSewa.RowHeadersWidth = 51
+        Me.DGCariSewa.RowTemplate.Height = 29
+        Me.DGCariSewa.Size = New System.Drawing.Size(896, 488)
+        Me.DGCariSewa.TabIndex = 35
         '
-        'btnSewa
+        'btnCari
         '
-        Me.btnSewa.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.btnSewa.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnSewa.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnSewa.ForeColor = System.Drawing.Color.White
-        Me.btnSewa.Location = New System.Drawing.Point(426, 98)
-        Me.btnSewa.Name = "btnSewa"
-        Me.btnSewa.Size = New System.Drawing.Size(80, 45)
-        Me.btnSewa.TabIndex = 34
-        Me.btnSewa.Text = "CARI"
-        Me.btnSewa.UseVisualStyleBackColor = False
+        Me.btnCari.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.btnCari.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnCari.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnCari.ForeColor = System.Drawing.Color.White
+        Me.btnCari.Location = New System.Drawing.Point(426, 98)
+        Me.btnCari.Name = "btnCari"
+        Me.btnCari.Size = New System.Drawing.Size(80, 45)
+        Me.btnCari.TabIndex = 34
+        Me.btnCari.Text = "CARI"
+        Me.btnCari.UseVisualStyleBackColor = False
         '
-        'TextBox3
+        'txtCari
         '
-        Me.TextBox3.Location = New System.Drawing.Point(19, 108)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(386, 27)
-        Me.TextBox3.TabIndex = 33
+        Me.txtCari.Location = New System.Drawing.Point(19, 108)
+        Me.txtCari.Name = "txtCari"
+        Me.txtCari.Size = New System.Drawing.Size(386, 27)
+        Me.txtCari.TabIndex = 33
         '
         'Label2
         '
@@ -76,21 +76,21 @@ Partial Class FormCariSewa
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(936, 687)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.btnSewa)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.DGCariSewa)
+        Me.Controls.Add(Me.btnCari)
+        Me.Controls.Add(Me.txtCari)
         Me.Controls.Add(Me.Label2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "FormCariSewa"
         Me.Text = "FormCariSewa"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGCariSewa, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents btnSewa As Button
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents DGCariSewa As DataGridView
+    Friend WithEvents btnCari As Button
+    Friend WithEvents txtCari As TextBox
     Friend WithEvents Label2 As Label
 End Class
