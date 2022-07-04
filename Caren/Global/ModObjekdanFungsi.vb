@@ -6,4 +6,6 @@
     Public KontrolCariSewa As New ClsCtlCariSewa
     Public KontrolDenda As New ClsCtlDenda
     Public EntitasDenda As New ClsEntDenda
+    Public KontrolSopir As New ClsCtlSopir
+    Public EntitasSopir As New ClsEntSopir
 End Module
