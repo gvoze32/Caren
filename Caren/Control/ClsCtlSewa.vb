@@ -1,12 +1,39 @@
 ﻿Imports System.Data.Odbc
-
 Public Class ClsCtlSewa : Implements InfProses
-
     Public Function InsertData(Ob As Object) As OdbcCommand Implements InfProses.InsertData
-        Dim data As New ClsEntMobil
+        Dim data As New ClsEntSewa
         data = Ob
-        CMD = New OdbcCommand("insert into mobil values('" & data.IdMobil & "','" & data.MerekMobil & "','" & data.TipeKendaraan & "','" & data.HargaSewa & "','" & data.IdAdmin & "')", BUKAKONEKSI)
-        CMD = New OdbcCommand("insert into mobil values('" & data.IdMobil & "','" & data.MerekMobil & "','" & data.TipeKendaraan & "','" & data.HargaSewa & "','" & data.IdAdmin & "')", BUKAKONEKSI)
+        CMD = New OdbcCommand("insert into sewa values('" & data.IDSewa & "','" & data.TglAmbil & "','" & data.TglKembali & "','" & data.IDCost & "','" & data.IDMobil & "','" & data.IDSupir & "')", BUKAKONEKSI)
+        CMD.CommandType = CommandType.Text
+        CMD.ExecuteNonQuery()
+        CMD = New OdbcCommand("", TUTUPKONEKSI)
+        Return CMD
+    End Function
+
+    Public Function InsertDataNonSupir(Ob As Object) As OdbcCommand
+        Dim data As New ClsEntSewa
+        data = Ob
+        CMD = New OdbcCommand("insert into sewa (id_sewa, tgl_ambil, tgl_kembali, id_cost, id_mobil) values ('" & data.IDSewa & "','" & data.TglAmbil & "','" & data.TglKembali & "','" & data.IDCost & "','" & data.IDMobil & "')", BUKAKONEKSI)
+        CMD.CommandType = CommandType.Text
+        CMD.ExecuteNonQuery()
+        CMD = New OdbcCommand("", TUTUPKONEKSI)
+        Return CMD
+    End Function
+
+    Public Function InsertDataCost(Ob As Object) As OdbcCommand
+        Dim data As New ClsEntSewa
+        data = Ob
+        CMD = New OdbcCommand("insert into costumer values('" & data.IDCost & "','" & data.Nama & "','" & data.NIK & "','" & data.NOHP & "','" & data.Session & "')", BUKAKONEKSI)
+        CMD.CommandType = CommandType.Text
+        CMD.ExecuteNonQuery()
+        CMD = New OdbcCommand("", TUTUPKONEKSI)
+        Return CMD
+    End Function
+
+    Public Function InsertDataBayar(Ob As Object) As OdbcCommand
+        Dim data As New ClsEntSewa
+        data = Ob
+        CMD = New OdbcCommand("insert into bayar(id_bayar, total_bayar, id_sewa) values ('" & data.IDBayar & "','" & data.TotalBayar & "','" & data.IDSewa & "')", BUKAKONEKSI)
         CMD.CommandType = CommandType.Text
         CMD.ExecuteNonQuery()
         CMD = New OdbcCommand("", TUTUPKONEKSI)
@@ -36,7 +63,7 @@ Public Class ClsCtlSewa : Implements InfProses
             DTS = New DataSet()
             DTA.Fill(DTS, "max_kode")
             kodeakhir = Val(DTS.Tables("max_kode").Rows(0).Item(0))
-            baru = "S" & Strings.Right("00" & kodeakhir + 1, 3)
+            baru = "C" & Strings.Right("00" & kodeakhir + 1, 3)
             Return baru
         Catch ex As Exception
             Throw New Exception(ex.Message)

@@ -2,10 +2,14 @@
 
 Public Class FormSewa
     Dim modeProses As Integer
+    Dim tglAmbilString As String
+    Dim tglKembaliString As String
     Private Sub FormSewa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Memberi custom date and time
         txtTglAmbil.CustomFormat = "yyyy-MM-dd"
         txtTglKembali.CustomFormat = "yyyy-MM-dd"
+        tglAmbilString = txtTglAmbil.Value.ToString("yyyy-M-d")
+        tglKembaliString = txtTglAmbil.Value.ToString("yyyy-M-d")
 
         'Memanggil fungsi kodebaru
         txtIDSewa.Text = KontrolSewa.kodebarusewa()
@@ -88,13 +92,24 @@ Public Class FormSewa
             .Nama = txtNama.Text
             .NIK = txtNIK.Text
             .NOHP = txtHP.Text
-            .TglAmbil = txtTglAmbil.Value
-            .TglKembali = txtTglKembali.Value
+            .TglAmbil = tglAmbilString
+            .TglKembali = tglKembaliString
             .TotalBayar = txtHarga.Text
         End With
 
-        KontrolSewa.InsertData(EntitasSewa)
+        If cbSupir.Checked = True Then
+            KontrolSewa.InsertDataCost(EntitasSewa)
+            KontrolSewa.InsertData(EntitasSewa)
+            KontrolSewa.InsertDataBayar(EntitasSewa)
+        Else
+            KontrolSewa.InsertDataCost(EntitasSewa)
+            KontrolSewa.InsertDataNonSupir(EntitasSewa)
+            KontrolSewa.InsertDataBayar(EntitasSewa)
+        End If
+
         MsgBox("Data berhasil ditambahkan")
         MsgBox("Data telah disimpan", MsgBoxStyle.Information, "Info")
+        Me.Hide()
+        FormDashboard.Show()
     End Sub
 End Class

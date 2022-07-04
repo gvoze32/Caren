@@ -1,16 +1,17 @@
 ﻿Public Class ClsEntSewa
     Private _id_sewa As String
-    Private _tgl_ambil As Date
-    Private _tgl_kembali As Date
+    Private _tgl_ambil As String
+    Private _tgl_kembali As String
     Private _id_cost As String
     Private _id_mobil As String
     Private _id_supir As String
     Private _nama As String
-    Private _nik As Integer
-    Private _nohp As Integer
+    Private _nik As String
+    Private _nohp As String
     Private _merekmobil As String
     Private _id_bayar As String
     Private _total_bayar As Integer
+    Private _session As String
 
     Public Property IDSewa As String
         Get
@@ -21,20 +22,20 @@
         End Set
     End Property
 
-    Public Property TglAmbil As Date
+    Public Property TglAmbil As String
         Get
             Return _tgl_ambil
         End Get
-        Set(ByVal value As Date)
+        Set(ByVal value As String)
             _tgl_ambil = value
         End Set
     End Property
 
-    Public Property TglKembali As Date
+    Public Property TglKembali As String
         Get
             Return _tgl_kembali
         End Get
-        Set(ByVal value As Date)
+        Set(ByVal value As String)
             _tgl_kembali = value
         End Set
     End Property
@@ -75,20 +76,20 @@
         End Set
     End Property
 
-    Public Property NIK As Integer
+    Public Property NIK As String
         Get
             Return _nik
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As String)
             _nik = value
         End Set
     End Property
 
-    Public Property NOHP As Integer
+    Public Property NOHP As String
         Get
             Return _nohp
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As String)
             _nohp = value
         End Set
     End Property
@@ -117,6 +118,15 @@
         End Get
         Set(ByVal value As Integer)
             _total_bayar = value
+        End Set
+    End Property
+
+    Public Property Session As String
+        Get
+            Return _session
+        End Get
+        Set(ByVal value As String)
+            _session = value
         End Set
     End Property
 End Class
