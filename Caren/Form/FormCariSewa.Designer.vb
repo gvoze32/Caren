@@ -80,6 +80,7 @@ Partial Class FormCariSewa
         Me.Controls.Add(Me.btnSewa)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.Label2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "FormCariSewa"
         Me.Text = "FormCariSewa"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

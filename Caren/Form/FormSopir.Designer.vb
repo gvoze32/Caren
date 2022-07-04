@@ -197,6 +197,7 @@ Partial Class FormSopir
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtDenda)
         Me.Controls.Add(Me.txtSopir)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "FormSopir"
         Me.Text = "FormSopir"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

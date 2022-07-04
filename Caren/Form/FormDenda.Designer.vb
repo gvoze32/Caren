@@ -238,6 +238,7 @@ Partial Class FormDenda
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtAdmin)
         Me.Controls.Add(Me.txtDenda)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "FormDenda"
         Me.Text = "FormDenda"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

@@ -118,6 +118,7 @@ Partial Class FormDashboard
         Me.Controls.Add(Me.btnSopir)
         Me.Controls.Add(Me.btnMobil)
         Me.Controls.Add(Me.txtDashboard)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "FormDashboard"
         Me.Text = "FormDashboard"
         Me.ResumeLayout(False)

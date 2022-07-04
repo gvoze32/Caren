@@ -325,6 +325,7 @@ Partial Class FormSewa
         Me.Controls.Add(Me.txtNIK)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtAdmin)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "FormSewa"
         Me.Text = "FormSewa"
         Me.ResumeLayout(False)
