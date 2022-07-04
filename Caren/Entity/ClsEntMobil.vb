@@ -3,7 +3,7 @@
     Private _merekMobil As String
     Private _tipeKendaraan As String
     Private _hargaSewa As Integer
-    Private _idAdmin As String
+    Private _Session As String
 
     Public Property IdMobil As String
         Get
@@ -41,12 +41,12 @@
         End Set
     End Property
 
-    Public Property IdAdmin As String
+    Public Property Session As String
         Get
-            Return _idAdmin
+            Return _Session
         End Get
         Set(value As String)
-            _idAdmin = value
+            _Session = value
         End Set
     End Property
 End Class

@@ -19,7 +19,6 @@
                 txtMerekMobil.Text = .Cells(1).Value.ToString
                 txtTipeMobil.Text = .Cells(2).Value.ToString
                 txtHargaSewa.Text = .Cells(3).Value.ToString
-                txtIDAdmin.Text = .Cells(4).Value.ToString
             End With
         End If
     End Sub
@@ -66,6 +65,8 @@
         AturButton(False)
         modeProses = 1
         txtMerekMobil.Text = ""
+        txtTipeMobil.Text = ""
+        txtHargaSewa.Text = ""
         txtIDMobil.Text = KontrolMobil.kodebaru()
         txtMerekMobil.Focus()
     End Sub
@@ -105,7 +106,6 @@
             .MerekMobil = txtMerekMobil.Text
             .TipeKendaraan = txtTipeMobil.Text
             .HargaSewa = txtHargaSewa.Text
-            .IdAdmin = txtIDAdmin.Text
         End With
 
         If modeProses = 1 Then

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormMobil
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FormMobil
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.btnHapus = New System.Windows.Forms.Button()
         Me.btnSimpan = New System.Windows.Forms.Button()
@@ -38,8 +38,6 @@ Partial Class FormMobil
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtIDMobil = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtIDAdmin = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.btnBatal = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         CType(Me.DGMobil, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -211,24 +209,6 @@ Partial Class FormMobil
         Me.Label4.TabIndex = 38
         Me.Label4.Text = "ID Mobil           : "
         '
-        'txtIDAdmin
-        '
-        Me.txtIDAdmin.Location = New System.Drawing.Point(282, 326)
-        Me.txtIDAdmin.Name = "txtIDAdmin"
-        Me.txtIDAdmin.Size = New System.Drawing.Size(191, 27)
-        Me.txtIDAdmin.TabIndex = 41
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(87, 322)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(184, 28)
-        Me.Label5.TabIndex = 40
-        Me.Label5.Text = "ID Admin          : "
-        '
         'btnBatal
         '
         Me.btnBatal.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(214, Byte), Integer))
@@ -263,8 +243,6 @@ Partial Class FormMobil
         Me.ClientSize = New System.Drawing.Size(936, 781)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnBatal)
-        Me.Controls.Add(Me.txtIDAdmin)
-        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtIDMobil)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtMerekMobil)
@@ -306,8 +284,6 @@ Partial Class FormMobil
     Friend WithEvents Label1 As Label
     Friend WithEvents txtIDMobil As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents txtIDAdmin As TextBox
-    Friend WithEvents Label5 As Label
     Friend WithEvents btnBatal As Button
     Friend WithEvents GroupBox1 As GroupBox
 End Class

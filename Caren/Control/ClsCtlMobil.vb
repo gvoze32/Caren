@@ -1,11 +1,10 @@
 ﻿Imports System.Data.Odbc
 
 Public Class ClsCtlMobil : Implements InfProses
-
     Public Function InsertData(Ob As Object) As OdbcCommand Implements InfProses.InsertData
         Dim data As New ClsEntMobil
         data = Ob
-        CMD = New OdbcCommand("insert into mobil values('" & data.IdMobil & "','" & data.MerekMobil & "','" & data.TipeKendaraan & "','" & data.HargaSewa & "','" & data.IdAdmin & "')", BUKAKONEKSI)
+        CMD = New OdbcCommand("insert into mobil values('" & data.IdMobil & "','" & data.MerekMobil & "','" & data.TipeKendaraan & "','" & data.HargaSewa & "','" & data.Session & "')", BUKAKONEKSI)
         CMD.CommandType = CommandType.Text
         CMD.ExecuteNonQuery()
         CMD = New OdbcCommand("", TUTUPKONEKSI)
@@ -15,7 +14,7 @@ Public Class ClsCtlMobil : Implements InfProses
     Public Function updateData(Ob As Object) As OdbcCommand Implements InfProses.updateData
         Dim data As New ClsEntMobil
         data = Ob
-        CMD = New OdbcCommand("update mobil set merek_mobil='" & data.MerekMobil & "'," & "tipe_kendaraan='" & data.TipeKendaraan & "'," & "harga_sewa='" & data.HargaSewa & "'," & "id_admin='" & data.IdAdmin & "' where id_mobil='" & data.IdMobil & "'", BUKAKONEKSI)
+        CMD = New OdbcCommand("update mobil set merek_mobil='" & data.MerekMobil & "'," & "tipe_kendaraan='" & data.TipeKendaraan & "'," & "harga_sewa='" & data.HargaSewa & "'," & "id_admin='" & data.Session & "' where id_mobil='" & data.IdMobil & "'", BUKAKONEKSI)
         CMD.CommandType = CommandType.Text
         CMD.ExecuteNonQuery()
         CMD = New OdbcCommand("", TUTUPKONEKSI)
@@ -33,6 +32,7 @@ Public Class ClsCtlMobil : Implements InfProses
     Public Function tampilData() As DataView Implements InfProses.tampilData
         Try
             DTA = New OdbcDataAdapter("select * from mobil", BUKAKONEKSI)
+            DTS = New DataSet()
             DTA.Fill(DTS, "Tabel_Mobil")
             Dim grid As New DataView(DTS.Tables("Tabel_Mobil"))
             Return grid

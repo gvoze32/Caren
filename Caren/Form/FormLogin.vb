@@ -29,6 +29,9 @@ Public Class FormLogin
             With EntitasSewa
                 .Session = session
             End With
+            With EntitasMobil
+                .Session = session
+            End With
         Else
             MsgBox("Nama admin tidak terdaftar")
         End If

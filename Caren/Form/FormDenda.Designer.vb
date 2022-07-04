@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormDenda
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,25 +20,26 @@ Partial Class FormDenda
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.txtDenda = New System.Windows.Forms.Label()
         Me.txtAdmin = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.btnSewa = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.txtTotalDenda = New System.Windows.Forms.TextBox()
+        Me.txtTotalBayar = New System.Windows.Forms.TextBox()
+        Me.txtCari = New System.Windows.Forms.TextBox()
+        Me.btnCari = New System.Windows.Forms.Button()
+        Me.DGDenda = New System.Windows.Forms.DataGridView()
+        Me.btnUbah = New System.Windows.Forms.Button()
+        Me.btnSimpan = New System.Windows.Forms.Button()
+        Me.btnHapus = New System.Windows.Forms.Button()
+        Me.btnBatal = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtIDDenda = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnHitung = New System.Windows.Forms.Button()
+        CType(Me.DGDenda, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtDenda
@@ -46,7 +47,7 @@ Partial Class FormDenda
         Me.txtDenda.AutoSize = True
         Me.txtDenda.Font = New System.Drawing.Font("Malgun Gothic", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.txtDenda.ForeColor = System.Drawing.Color.White
-        Me.txtDenda.Location = New System.Drawing.Point(298, 52)
+        Me.txtDenda.Location = New System.Drawing.Point(298, 46)
         Me.txtDenda.Name = "txtDenda"
         Me.txtDenda.Size = New System.Drawing.Size(296, 54)
         Me.txtDenda.TabIndex = 2
@@ -57,164 +58,162 @@ Partial Class FormDenda
         Me.txtAdmin.AutoSize = True
         Me.txtAdmin.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.txtAdmin.ForeColor = System.Drawing.Color.White
-        Me.txtAdmin.Location = New System.Drawing.Point(79, 231)
+        Me.txtAdmin.Location = New System.Drawing.Point(79, 213)
         Me.txtAdmin.Name = "txtAdmin"
-        Me.txtAdmin.Size = New System.Drawing.Size(190, 28)
+        Me.txtAdmin.Size = New System.Drawing.Size(191, 28)
         Me.txtAdmin.TabIndex = 3
-        Me.txtAdmin.Text = "Total Denda       : "
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(79, 382)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(366, 28)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Masukkan nama kategori yang dicari"
+        Me.txtAdmin.Text = "Denda               : "
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(79, 279)
+        Me.Label3.Location = New System.Drawing.Point(79, 261)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(189, 28)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Total Bayar        : "
         '
-        'Label4
+        'txtTotalDenda
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(79, 180)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(140, 28)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "Status Denda"
+        Me.txtTotalDenda.Location = New System.Drawing.Point(274, 217)
+        Me.txtTotalDenda.Name = "txtTotalDenda"
+        Me.txtTotalDenda.Size = New System.Drawing.Size(191, 27)
+        Me.txtTotalDenda.TabIndex = 11
         '
-        'CheckBox1
+        'txtTotalBayar
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.CheckBox1.ForeColor = System.Drawing.Color.White
-        Me.CheckBox1.Location = New System.Drawing.Point(274, 179)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(72, 32)
-        Me.CheckBox1.TabIndex = 9
-        Me.CheckBox1.Text = "Ada"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.txtTotalBayar.Location = New System.Drawing.Point(274, 265)
+        Me.txtTotalBayar.Name = "txtTotalBayar"
+        Me.txtTotalBayar.Size = New System.Drawing.Size(191, 27)
+        Me.txtTotalBayar.TabIndex = 12
         '
-        'CheckBox2
+        'txtCari
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.CheckBox2.ForeColor = System.Drawing.Color.White
-        Me.CheckBox2.Location = New System.Drawing.Point(363, 180)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(131, 32)
-        Me.CheckBox2.TabIndex = 10
-        Me.CheckBox2.Text = "Tidak Ada"
-        Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.txtCari.Location = New System.Drawing.Point(21, 60)
+        Me.txtCari.Name = "txtCari"
+        Me.txtCari.Size = New System.Drawing.Size(386, 34)
+        Me.txtCari.TabIndex = 13
         '
-        'TextBox1
+        'btnCari
         '
-        Me.TextBox1.Location = New System.Drawing.Point(274, 235)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(191, 27)
-        Me.TextBox1.TabIndex = 11
+        Me.btnCari.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.btnCari.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnCari.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnCari.ForeColor = System.Drawing.Color.White
+        Me.btnCari.Location = New System.Drawing.Point(435, 55)
+        Me.btnCari.Name = "btnCari"
+        Me.btnCari.Size = New System.Drawing.Size(80, 45)
+        Me.btnCari.TabIndex = 14
+        Me.btnCari.Text = "CARI"
+        Me.btnCari.UseVisualStyleBackColor = False
         '
-        'TextBox2
+        'DGDenda
         '
-        Me.TextBox2.Location = New System.Drawing.Point(274, 283)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(191, 27)
-        Me.TextBox2.TabIndex = 12
+        Me.DGDenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGDenda.Location = New System.Drawing.Point(79, 470)
+        Me.DGDenda.Name = "DGDenda"
+        Me.DGDenda.RowHeadersWidth = 51
+        Me.DGDenda.RowTemplate.Height = 29
+        Me.DGDenda.Size = New System.Drawing.Size(762, 188)
+        Me.DGDenda.TabIndex = 15
         '
-        'TextBox3
+        'btnUbah
         '
-        Me.TextBox3.Location = New System.Drawing.Point(79, 426)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(386, 27)
-        Me.TextBox3.TabIndex = 13
+        Me.btnUbah.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.btnUbah.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnUbah.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnUbah.ForeColor = System.Drawing.Color.White
+        Me.btnUbah.Image = Global.Caren.My.Resources.Resources.edit
+        Me.btnUbah.Location = New System.Drawing.Point(781, 165)
+        Me.btnUbah.Name = "btnUbah"
+        Me.btnUbah.Size = New System.Drawing.Size(60, 60)
+        Me.btnUbah.TabIndex = 17
+        Me.btnUbah.UseVisualStyleBackColor = False
         '
-        'btnSewa
+        'btnSimpan
         '
-        Me.btnSewa.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.btnSewa.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnSewa.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnSewa.ForeColor = System.Drawing.Color.White
-        Me.btnSewa.Location = New System.Drawing.Point(486, 416)
-        Me.btnSewa.Name = "btnSewa"
-        Me.btnSewa.Size = New System.Drawing.Size(80, 45)
-        Me.btnSewa.TabIndex = 14
-        Me.btnSewa.Text = "CARI"
-        Me.btnSewa.UseVisualStyleBackColor = False
+        Me.btnSimpan.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.btnSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnSimpan.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnSimpan.ForeColor = System.Drawing.Color.White
+        Me.btnSimpan.Image = Global.Caren.My.Resources.Resources.save
+        Me.btnSimpan.Location = New System.Drawing.Point(781, 231)
+        Me.btnSimpan.Name = "btnSimpan"
+        Me.btnSimpan.Size = New System.Drawing.Size(60, 60)
+        Me.btnSimpan.TabIndex = 18
+        Me.btnSimpan.UseVisualStyleBackColor = False
         '
-        'DataGridView1
+        'btnHapus
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(79, 470)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 29
-        Me.DataGridView1.Size = New System.Drawing.Size(762, 188)
-        Me.DataGridView1.TabIndex = 15
+        Me.btnHapus.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.btnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnHapus.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnHapus.ForeColor = System.Drawing.Color.White
+        Me.btnHapus.Image = Global.Caren.My.Resources.Resources.delete
+        Me.btnHapus.Location = New System.Drawing.Point(781, 297)
+        Me.btnHapus.Name = "btnHapus"
+        Me.btnHapus.Size = New System.Drawing.Size(60, 60)
+        Me.btnHapus.TabIndex = 19
+        Me.btnHapus.UseVisualStyleBackColor = False
         '
-        'Button1
+        'btnBatal
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Image = Global.Caren.My.Resources.Resources.add
-        Me.Button1.Location = New System.Drawing.Point(781, 164)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(60, 60)
-        Me.Button1.TabIndex = 16
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnBatal.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.btnBatal.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnBatal.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnBatal.ForeColor = System.Drawing.Color.White
+        Me.btnBatal.Image = Global.Caren.My.Resources.Resources.cancel
+        Me.btnBatal.Location = New System.Drawing.Point(781, 363)
+        Me.btnBatal.Name = "btnBatal"
+        Me.btnBatal.Size = New System.Drawing.Size(60, 60)
+        Me.btnBatal.TabIndex = 43
+        Me.btnBatal.UseVisualStyleBackColor = False
         '
-        'Button2
+        'GroupBox1
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Image = Global.Caren.My.Resources.Resources.edit
-        Me.Button2.Location = New System.Drawing.Point(781, 230)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(60, 60)
-        Me.Button2.TabIndex = 17
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.GroupBox1.Controls.Add(Me.txtCari)
+        Me.GroupBox1.Controls.Add(Me.btnCari)
+        Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.GroupBox1.ForeColor = System.Drawing.Color.White
+        Me.GroupBox1.Location = New System.Drawing.Point(79, 325)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(535, 123)
+        Me.GroupBox1.TabIndex = 44
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Masukkan nama kategori yang dicari"
         '
-        'Button3
+        'txtIDDenda
         '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button3.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Image = Global.Caren.My.Resources.Resources.save
-        Me.Button3.Location = New System.Drawing.Point(781, 296)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(60, 60)
-        Me.Button3.TabIndex = 18
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.txtIDDenda.Location = New System.Drawing.Point(274, 169)
+        Me.txtIDDenda.Name = "txtIDDenda"
+        Me.txtIDDenda.Size = New System.Drawing.Size(191, 27)
+        Me.txtIDDenda.TabIndex = 46
         '
-        'Button4
+        'Label1
         '
-        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(214, Byte), Integer))
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button4.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Image = Global.Caren.My.Resources.Resources.delete
-        Me.Button4.Location = New System.Drawing.Point(781, 362)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(60, 60)
-        Me.Button4.TabIndex = 19
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(79, 165)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(191, 28)
+        Me.Label1.TabIndex = 45
+        Me.Label1.Text = "ID Denda           : "
+        '
+        'btnHitung
+        '
+        Me.btnHitung.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.btnHitung.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnHitung.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnHitung.ForeColor = System.Drawing.Color.White
+        Me.btnHitung.Location = New System.Drawing.Point(484, 253)
+        Me.btnHitung.Name = "btnHitung"
+        Me.btnHitung.Size = New System.Drawing.Size(99, 45)
+        Me.btnHitung.TabIndex = 59
+        Me.btnHitung.Text = "HITUNG"
+        Me.btnHitung.UseVisualStyleBackColor = False
         '
         'FormDenda
         '
@@ -222,26 +221,26 @@ Partial Class FormDenda
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(936, 687)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.btnSewa)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.CheckBox2)
-        Me.Controls.Add(Me.CheckBox1)
-        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.btnHitung)
+        Me.Controls.Add(Me.txtIDDenda)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.btnBatal)
+        Me.Controls.Add(Me.btnHapus)
+        Me.Controls.Add(Me.btnSimpan)
+        Me.Controls.Add(Me.btnUbah)
+        Me.Controls.Add(Me.DGDenda)
+        Me.Controls.Add(Me.txtTotalBayar)
+        Me.Controls.Add(Me.txtTotalDenda)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtAdmin)
         Me.Controls.Add(Me.txtDenda)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "FormDenda"
         Me.Text = "FormDenda"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGDenda, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -249,18 +248,18 @@ Partial Class FormDenda
 
     Friend WithEvents txtDenda As Label
     Friend WithEvents txtAdmin As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents btnSewa As Button
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents txtTotalDenda As TextBox
+    Friend WithEvents txtTotalBayar As TextBox
+    Friend WithEvents txtCari As TextBox
+    Friend WithEvents btnCari As Button
+    Friend WithEvents DGDenda As DataGridView
+    Friend WithEvents btnUbah As Button
+    Friend WithEvents btnSimpan As Button
+    Friend WithEvents btnHapus As Button
+    Friend WithEvents btnBatal As Button
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents txtIDDenda As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents btnHitung As Button
 End Class
