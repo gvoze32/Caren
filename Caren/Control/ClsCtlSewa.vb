@@ -3,7 +3,7 @@ Public Class ClsCtlSewa : Implements InfProses
     Public Function InsertData(Ob As Object) As OdbcCommand Implements InfProses.InsertData
         Dim data As New ClsEntSewa
         data = Ob
-        CMD = New OdbcCommand("insert into sewa values('" & data.IDSewa & "','" & data.TglAmbil & "','" & data.TglKembali & "','" & data.IDCost & "','" & data.IDMobil & "','" & data.IDSupir & "')", BUKAKONEKSI)
+        CMD = New OdbcCommand("insert into sewa values('" & data.IDSewa & "','" & Format(data.TglAmbil, "yyyy/MM/dd") & "','" & Format(data.TglKembali, "yyyy/MM/dd") & "','" & data.IDCost & "','" & data.IDMobil & "','" & data.IDSupir & "')", BUKAKONEKSI)
         CMD.CommandType = CommandType.Text
         CMD.ExecuteNonQuery()
         CMD = New OdbcCommand("", TUTUPKONEKSI)
@@ -13,7 +13,7 @@ Public Class ClsCtlSewa : Implements InfProses
     Public Function InsertDataNonSupir(Ob As Object) As OdbcCommand
         Dim data As New ClsEntSewa
         data = Ob
-        CMD = New OdbcCommand("insert into sewa (id_sewa, tgl_ambil, tgl_kembali, id_cost, id_mobil) values ('" & data.IDSewa & "','" & data.TglAmbil & "','" & data.TglKembali & "','" & data.IDCost & "','" & data.IDMobil & "')", BUKAKONEKSI)
+        CMD = New OdbcCommand("insert into sewa (id_sewa, tgl_ambil, tgl_kembali, id_cost, id_mobil) values ('" & data.IDSewa & "','" & Format(data.TglAmbil, "yyyy/MM/dd") & "','" & Format(data.TglKembali, "yyyy/MM/dd") & "','" & data.IDCost & "','" & data.IDMobil & "')", BUKAKONEKSI)
         CMD.CommandType = CommandType.Text
         CMD.ExecuteNonQuery()
         CMD = New OdbcCommand("", TUTUPKONEKSI)

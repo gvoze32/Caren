@@ -2,14 +2,10 @@
 
 Public Class FormSewa
     Dim modeProses As Integer
-    Dim tglAmbilString As String
-    Dim tglKembaliString As String
     Private Sub FormSewa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Memberi custom date and time
         txtTglAmbil.CustomFormat = "yyyy-MM-dd"
         txtTglKembali.CustomFormat = "yyyy-MM-dd"
-        tglAmbilString = txtTglAmbil.Value.ToString("yyyy-M-d")
-        tglKembaliString = txtTglAmbil.Value.ToString("yyyy-M-d")
 
         'Memanggil fungsi kodebaru
         txtIDSewa.Text = KontrolSewa.kodebarusewa()
@@ -83,6 +79,12 @@ Public Class FormSewa
     End Sub
 
     Private Sub btnMasuk_Click(sender As Object, e As EventArgs) Handles btnMasuk.Click
+        Dim stringambil As String = Format(txtTglAmbil.Value, "yyyy/MM/dd")
+        Dim stringkembali As String = Format(txtTglKembali.Value, "yyyy/MM/dd")
+
+        Dim dateambil As Date = DateTime.ParseExact(stringambil, "yyyy/MM/dd", Nothing)
+        Dim datekembali As Date = DateTime.ParseExact(stringkembali, "yyyy/MM/dd", Nothing)
+
         With EntitasSewa
             .IDSewa = txtIDSewa.Text
             .IDCost = txtIDCost.Text
@@ -92,8 +94,8 @@ Public Class FormSewa
             .Nama = txtNama.Text
             .NIK = txtNIK.Text
             .NOHP = txtHP.Text
-            .TglAmbil = tglAmbilString
-            .TglKembali = tglKembaliString
+            .TglAmbil = dateambil
+            .TglKembali = datekembali
             .TotalBayar = txtHarga.Text
         End With
 

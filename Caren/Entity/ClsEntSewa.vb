@@ -1,7 +1,7 @@
 ﻿Public Class ClsEntSewa
     Private _id_sewa As String
-    Private _tgl_ambil As String
-    Private _tgl_kembali As String
+    Private _tgl_ambil As Date
+    Private _tgl_kembali As Date
     Private _id_cost As String
     Private _id_mobil As String
     Private _id_supir As String
@@ -22,20 +22,20 @@
         End Set
     End Property
 
-    Public Property TglAmbil As String
+    Public Property TglAmbil As Date
         Get
             Return _tgl_ambil
         End Get
-        Set(ByVal value As String)
+        Set(ByVal value As Date)
             _tgl_ambil = value
         End Set
     End Property
 
-    Public Property TglKembali As String
+    Public Property TglKembali As Date
         Get
             Return _tgl_kembali
         End Get
-        Set(ByVal value As String)
+        Set(ByVal value As Date)
             _tgl_kembali = value
         End Set
     End Property
